@@ -187,6 +187,7 @@ STATIC ClassObject* dvmFindClass(const char *classDesc){
 
 	jclass jnicls = dvmFindJNIClass(env, newclassDesc);
 	ClassObject *res = jnicls ? static_cast<ClassObject*>(dvmDecodeIndirectRef(dvmThreadSelf(), jnicls)) : NULL;
+	env->DeleteGlobalRef(jnicls);
 	free(newclassDesc);
 	return res;
 }
@@ -321,9 +322,9 @@ STATIC void method_handler(const u4* args, JValue* pResult, const Method* method
 	LOGI("entry %s->%s", info->classDesc, info->methodName);
 
 	Method* originalMethod = reinterpret_cast<Method*>(info->originalMethod);
-	Object* thisObject = (Object*)args[0];
+	Object* thisObject = !info->isStaticMethod ? (Object*)args[0]: NULL;
 
-	ArrayObject* argTypes = dvmBoxMethodArgs(originalMethod, args + 1);
+	ArrayObject* argTypes = dvmBoxMethodArgs(originalMethod, info->isStaticMethod ? args : args + 1);
 	pResult->l = (void *)dvmInvokeMethod(thisObject, originalMethod, argTypes, (ArrayObject *)info->paramTypes, (ClassObject *)info->returnType, true);
 
 	dvmReleaseTrackedAlloc((Object *)argTypes, self);
