@@ -1,5 +1,5 @@
-obj/local/armeabi/objs/onehook/DalvikMethodHook.o: \
- jni/DalvikMethodHook.cpp \
+obj/local/armeabi/objs/onehook/JavaHook/DalvikMethodHook.o: \
+ jni/JavaHook/DalvikMethodHook.cpp \
  /Users/boyliang/Dev/android-ndk-r9d/platforms/android-16/arch-arm/usr/include/android_runtime/AndroidRuntime.h \
  /Users/boyliang/Dev/android-ndk-r9d/platforms/android-16/arch-arm/usr/include/utils/Errors.h \
  /Users/boyliang/Dev/android-ndk-r9d/platforms/android-16/arch-arm/usr/include/sys/types.h \
@@ -67,7 +67,6 @@ obj/local/armeabi/objs/onehook/DalvikMethodHook.o: \
  /Users/boyliang/Dev/android-ndk-r9d/platforms/android-16/arch-arm/usr/include/android/log.h \
  /Users/boyliang/Dev/android-ndk-r9d/platforms/android-16/arch-arm/usr/include/utils/VectorImpl.h \
  /Users/boyliang/Dev/android-ndk-r9d/platforms/android-16/arch-arm/usr/include/assert.h \
- /Users/boyliang/Dev/android-ndk-r9d/platforms/android-16/arch-arm/usr/include/utils/String8.h \
  /Users/boyliang/Dev/android-ndk-r9d/platforms/android-16/arch-arm/usr/include/utils/threads.h \
  /Users/boyliang/Dev/android-ndk-r9d/platforms/android-16/arch-arm/usr/include/utils/AndroidThreads.h \
  /Users/boyliang/Dev/android-ndk-r9d/platforms/android-16/arch-arm/usr/include/utils/ThreadDefs.h \
@@ -80,13 +79,12 @@ obj/local/armeabi/objs/onehook/DalvikMethodHook.o: \
  /Users/boyliang/Dev/android-ndk-r9d/platforms/android-16/arch-arm/usr/include/pthread.h \
  /Users/boyliang/Dev/android-ndk-r9d/platforms/android-16/arch-arm/usr/include/sched.h \
  /Users/boyliang/Dev/android-ndk-r9d/platforms/android-16/arch-arm/usr/include/nativehelper/jni.h \
- jni/JavaMethodHook.h \
+ jni/JavaHook/JavaMethodHook.h \
  /Users/boyliang/Dev/android-ndk-r9d/platforms/android-16/arch-arm/usr/include/jni.h \
- jni/object.h \
  /Users/boyliang/Dev/android-ndk-r9d/platforms/android-16/arch-arm/usr/include/elf.h \
  /Users/boyliang/Dev/android-ndk-r9d/platforms/android-16/arch-arm/usr/include/sys/exec_elf.h \
  /Users/boyliang/Dev/android-ndk-r9d/platforms/android-16/arch-arm/usr/include/machine/exec.h \
- jni/common.h jni/dvm.h jni/object.h
+ jni/JavaHook/object.h jni/common.h jni/JavaHook/dvm.h
 
 /Users/boyliang/Dev/android-ndk-r9d/platforms/android-16/arch-arm/usr/include/android_runtime/AndroidRuntime.h:
 
@@ -222,8 +220,6 @@ obj/local/armeabi/objs/onehook/DalvikMethodHook.o: \
 
 /Users/boyliang/Dev/android-ndk-r9d/platforms/android-16/arch-arm/usr/include/assert.h:
 
-/Users/boyliang/Dev/android-ndk-r9d/platforms/android-16/arch-arm/usr/include/utils/String8.h:
-
 /Users/boyliang/Dev/android-ndk-r9d/platforms/android-16/arch-arm/usr/include/utils/threads.h:
 
 /Users/boyliang/Dev/android-ndk-r9d/platforms/android-16/arch-arm/usr/include/utils/AndroidThreads.h:
@@ -248,11 +244,9 @@ obj/local/armeabi/objs/onehook/DalvikMethodHook.o: \
 
 /Users/boyliang/Dev/android-ndk-r9d/platforms/android-16/arch-arm/usr/include/nativehelper/jni.h:
 
-jni/JavaMethodHook.h:
+jni/JavaHook/JavaMethodHook.h:
 
 /Users/boyliang/Dev/android-ndk-r9d/platforms/android-16/arch-arm/usr/include/jni.h:
-
-jni/object.h:
 
 /Users/boyliang/Dev/android-ndk-r9d/platforms/android-16/arch-arm/usr/include/elf.h:
 
@@ -260,8 +254,8 @@ jni/object.h:
 
 /Users/boyliang/Dev/android-ndk-r9d/platforms/android-16/arch-arm/usr/include/machine/exec.h:
 
+jni/JavaHook/object.h:
+
 jni/common.h:
 
-jni/dvm.h:
-
-jni/object.h:
+jni/JavaHook/dvm.h:

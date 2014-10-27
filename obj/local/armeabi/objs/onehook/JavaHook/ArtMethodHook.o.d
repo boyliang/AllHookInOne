@@ -1,12 +1,17 @@
-obj/local/armeabi/objs/onehook/ArtMethodHook.o: jni/ArtMethodHook.cpp \
+obj/local/armeabi/objs/onehook/JavaHook/ArtMethodHook.o: \
+ jni/JavaHook/ArtMethodHook.cpp \
  /Users/boyliang/Dev/android-ndk-r9d/platforms/android-16/arch-arm/usr/include/jni.h \
  /Users/boyliang/Dev/android-ndk-r9d/platforms/android-16/arch-arm/usr/include/sys/cdefs.h \
  /Users/boyliang/Dev/android-ndk-r9d/platforms/android-16/arch-arm/usr/include/sys/cdefs_elf.h \
  /Users/boyliang/Dev/android-ndk-r9d/platforms/android-16/arch-arm/usr/include/android/api-level.h \
- jni/JavaMethodHook.h jni/object.h \
+ jni/JavaHook/JavaMethodHook.h \
+ /Users/boyliang/Dev/android-ndk-r9d/platforms/android-16/arch-arm/usr/include/elf.h \
  /Users/boyliang/Dev/android-ndk-r9d/platforms/android-16/arch-arm/usr/include/stdint.h \
  /Users/boyliang/Dev/android-ndk-r9d/platforms/android-16/arch-arm/usr/include/sys/_types.h \
  /Users/boyliang/Dev/android-ndk-r9d/platforms/android-16/arch-arm/usr/include/machine/_types.h \
+ /Users/boyliang/Dev/android-ndk-r9d/platforms/android-16/arch-arm/usr/include/sys/exec_elf.h \
+ /Users/boyliang/Dev/android-ndk-r9d/platforms/android-16/arch-arm/usr/include/machine/exec.h \
+ jni/JavaHook/object.h \
  /Users/boyliang/Dev/android-ndk-r9d/platforms/android-16/arch-arm/usr/include/pthread.h \
  /Users/boyliang/Dev/android-ndk-r9d/platforms/android-16/arch-arm/usr/include/time.h \
  /Users/boyliang/Dev/android-ndk-r9d/platforms/android-16/arch-arm/usr/include/sys/time.h \
@@ -35,10 +40,7 @@ obj/local/armeabi/objs/onehook/ArtMethodHook.o: jni/ArtMethodHook.cpp \
  /Users/boyliang/Dev/android-ndk-r9d/platforms/android-16/arch-arm/usr/include/asm/signal.h \
  /Users/boyliang/Dev/android-ndk-r9d/platforms/android-16/arch-arm/usr/include/asm-generic/signal.h \
  /Users/boyliang/Dev/android-ndk-r9d/platforms/android-16/arch-arm/usr/include/asm/sigcontext.h \
- /Users/boyliang/Dev/android-ndk-r9d/platforms/android-16/arch-arm/usr/include/sched.h \
- /Users/boyliang/Dev/android-ndk-r9d/platforms/android-16/arch-arm/usr/include/elf.h \
- /Users/boyliang/Dev/android-ndk-r9d/platforms/android-16/arch-arm/usr/include/sys/exec_elf.h \
- /Users/boyliang/Dev/android-ndk-r9d/platforms/android-16/arch-arm/usr/include/machine/exec.h
+ /Users/boyliang/Dev/android-ndk-r9d/platforms/android-16/arch-arm/usr/include/sched.h
 
 /Users/boyliang/Dev/android-ndk-r9d/platforms/android-16/arch-arm/usr/include/jni.h:
 
@@ -48,15 +50,21 @@ obj/local/armeabi/objs/onehook/ArtMethodHook.o: jni/ArtMethodHook.cpp \
 
 /Users/boyliang/Dev/android-ndk-r9d/platforms/android-16/arch-arm/usr/include/android/api-level.h:
 
-jni/JavaMethodHook.h:
+jni/JavaHook/JavaMethodHook.h:
 
-jni/object.h:
+/Users/boyliang/Dev/android-ndk-r9d/platforms/android-16/arch-arm/usr/include/elf.h:
 
 /Users/boyliang/Dev/android-ndk-r9d/platforms/android-16/arch-arm/usr/include/stdint.h:
 
 /Users/boyliang/Dev/android-ndk-r9d/platforms/android-16/arch-arm/usr/include/sys/_types.h:
 
 /Users/boyliang/Dev/android-ndk-r9d/platforms/android-16/arch-arm/usr/include/machine/_types.h:
+
+/Users/boyliang/Dev/android-ndk-r9d/platforms/android-16/arch-arm/usr/include/sys/exec_elf.h:
+
+/Users/boyliang/Dev/android-ndk-r9d/platforms/android-16/arch-arm/usr/include/machine/exec.h:
+
+jni/JavaHook/object.h:
 
 /Users/boyliang/Dev/android-ndk-r9d/platforms/android-16/arch-arm/usr/include/pthread.h:
 
@@ -115,9 +123,3 @@ jni/object.h:
 /Users/boyliang/Dev/android-ndk-r9d/platforms/android-16/arch-arm/usr/include/asm/sigcontext.h:
 
 /Users/boyliang/Dev/android-ndk-r9d/platforms/android-16/arch-arm/usr/include/sched.h:
-
-/Users/boyliang/Dev/android-ndk-r9d/platforms/android-16/arch-arm/usr/include/elf.h:
-
-/Users/boyliang/Dev/android-ndk-r9d/platforms/android-16/arch-arm/usr/include/sys/exec_elf.h:
-
-/Users/boyliang/Dev/android-ndk-r9d/platforms/android-16/arch-arm/usr/include/machine/exec.h:
