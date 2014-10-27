@@ -181,12 +181,12 @@ void getElfInfoBySegmentView(ElfInfo &info, const ElfHandle *handle){
 			info.nchain = rawdata[1];
 			info.bucket = rawdata + 2;
 			info.chain = info.bucket + info.nbucket;
+
+			info.symsz = info.nchain;
 			break;
 		}
 	}
 
-	//because .dynsym is next to .dynstr, so we can caculate the symsz simply
-	info.symsz = ((uint32_t)info.symstr - (uint32_t)info.sym)/sizeof(Elf32_Sym);
 }
 
 void findSymByName(ElfInfo &info, const char *symbol, Elf32_Sym **sym, int *symidx) {
