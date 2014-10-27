@@ -62,6 +62,9 @@ public class MainActivity extends Activity {
 			e.printStackTrace();
 		}
 		Log.i("TTT", "after3: " + getString3(entity));
+		
+		// ELFHook测试
+		HookUtils.elfhook();
 	}
 
 	@Override

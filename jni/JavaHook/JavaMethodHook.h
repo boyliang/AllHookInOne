@@ -10,8 +10,9 @@
 
 #include <jni.h>
 #include <stddef.h>
-#include <object.h>
 #include <elf.h>
+
+#include "object.h"
 
 struct HookInfo {
 	char *classDesc;

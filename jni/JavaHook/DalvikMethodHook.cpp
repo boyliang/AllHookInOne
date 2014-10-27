@@ -138,6 +138,10 @@ STATIC int dvmComputeJniArgInfo(const char* shorty) {
 STATIC jclass dvmFindJNIClass(JNIEnv *env,const char *classDesc){
 	jclass classObj = env->FindClass(classDesc);
 
+	if(env->ExceptionCheck() == JNI_TRUE){
+		env->ExceptionClear();
+	}
+
 	if(classObj == NULL){
 		jclass clazzApplicationLoaders = env->FindClass("android/app/ApplicationLoaders");
 		CHECK_VALID(clazzApplicationLoaders);
