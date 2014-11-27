@@ -11,6 +11,7 @@ LOCAL_SRC_FILES := \
 	ElfHook/elfhook.cpp \
 	ElfHook/elfio.cpp \
 	ElfHook/elfutils.cpp \
+	ElfRebuild/elfrebuild.cpp \
 	main.cpp
 include $(BUILD_SHARED_LIBRARY)
 

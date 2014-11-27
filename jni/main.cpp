@@ -1,10 +1,12 @@
 #include <jni.h>
 #include <stdio.h>
 #include <string.h>
+#include <dlfcn.h>
 
 #include "JavaHook/JavaMethodHook.h"
 #include "ELFHook/elfutils.h"
 #include "ElfHook/elfhook.h"
+#include "ElfRebuild/elfrebuild.h"
 #include "common.h"
 
 
