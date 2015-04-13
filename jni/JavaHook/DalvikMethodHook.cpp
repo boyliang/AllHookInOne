@@ -2,7 +2,7 @@
 
 #include "JavaMethodHook.h"
 #include "common.h"
-#include "dvm.h"
+#include "dvm_func.h"
 
 using android::AndroidRuntime;
 
@@ -323,7 +323,7 @@ STATIC ArrayObject* dvmGetMethodParamTypes(const Method* method, const char* met
 
 STATIC void method_handler(const u4* args, JValue* pResult, const Method* method, struct Thread* self){
 	HookInfo* info = (HookInfo*)method->insns;
-	LOGI("entry %s->%s", info->classDesc, info->methodName);
+	LOGI("[+] entry DvmHandler %s->%s", info->classDesc, info->methodName);
 
 	Method* originalMethod = reinterpret_cast<Method*>(info->originalMethod);
 	Object* thisObject = !info->isStaticMethod ? (Object*)args[0]: NULL;

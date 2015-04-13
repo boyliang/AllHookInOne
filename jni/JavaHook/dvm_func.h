@@ -12,7 +12,7 @@
 #include <stdio.h>
 #include <assert.h>
 
-#include "object.h"
+#include "dvm_object.h"
 
 /*
  * Get our Thread* from TLS.

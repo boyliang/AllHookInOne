@@ -12,17 +12,20 @@
 #include <stddef.h>
 #include <elf.h>
 
-#include "object.h"
-
 struct HookInfo {
 	char *classDesc;
 	char *methodName;
 	char *methodSig;
 
+	// for dalvik jvm
 	bool isStaticMethod;
 	void *originalMethod;
 	void *returnType;
 	void *paramTypes;
+
+	// for art jvm
+	const void *nativecode;
+	const void *entrypoint;
 };
 
 int java_method_hook(JNIEnv* env, HookInfo *info);

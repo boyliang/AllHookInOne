@@ -31,5 +31,4 @@ public final class HookUtils {
 	public static native int elfhook();
 	
 	private static native int hookMethodNative(String clsdes, String methodname, String methodsig, boolean isstatic);
-	
 }
